@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #f8ebdc;
+}
+
+.overall-container{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+
+
+}
+
+.top-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #e9dccb;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+.greetings-stat{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 2rem;
+
+}
+
+.greetings{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.greetings h1{
+    color: #000;
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.greetings span{
+    font-size: 1.5rem;
+    text-align:start;
+}
+
+.greetings p{
+    color: #565957;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.right-container{
+    width: 50%;
+    height: auto;
+
+}
+
+.stats-container{
+    width: 100%;
+    max-height: 5.563rem;
+    background-color: #eadccc;
+    border: 1px solid #b4b3b3;
+    border-radius: 1rem;
+    display: flex;
+    padding: 1.25rem 1rem;
+    align-items: center;
+    max-width: 23.688rem;
+    column-gap: 2rem;
+    margin-left: 3.5rem;
+
+}
+
+.tasks-number p{
+    width: 4rem;
+    height: 4rem;
+    background-color: #4281a4;
+    border-radius: 1000000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+.guide-stats{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+}
+
+.guide-stats h3{
+    color: #000;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.flow-stats{
+    width: 100%;
+}
+
+#progress{
+    width: 100%;
+    height: 0.5rem;
+    background-color: #4281a4;
+    border-radius: 0.5rem;
+}
+
+.bottom-overlay{
+    width: 100%;
+    height: auto;
+    background-color: #fdefdf;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem 2rem 0 0;
+    padding: 0 2rem 0 2rem;
+
+}
+
+form{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b4b3b3;
+    border-radius: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+form input{
+    width: 100%;
+    height: auto;
+    outline: none;
+    background-color: #fdefdf;
+    border: none;
+}
+
+input[type="text"] {
+    background-color: #fdefdf;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-internal-autofill-selected {
+    background-color: #fdefdf; /* Maintain background color */
+    color: var(--color-dark-one) !important; /* Maintain text color */
+    -webkit-text-fill-color: var(--color-dark-one) !important; /* Ensure text color is applied */
+    transition: background-color 5000s ease-in-out 0s; /* Prevent background color change */
+}
+
+
+
+form:focus{
+    border: 1px solid #000;
+    background-color: #fdefdf; /* Maintain background color */
+    color: #000; /* Maintain text color */
+}
+
+button{
+    width: fit-content;
+    height: auto;
+    max-width: 3.875rem;
+    max-height: 3.2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background-color: #f8ebdc;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-lists{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+
+
+}
+
+.content-lists{
+    width: 32%;
+    height: 12.5rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #eadccc;
+    row-gap: 1.81rem;
+    padding: 0.875rem 1rem 0.5rem 1rem;
+    border-radius: 0.5rem;
+    align-self: flex-start;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.above-elements{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .above-elements input{
+    width: 1.15rem;
+    height: 1.15rem;
+} */
+input[type="checkbox"] {
+    opacity: 0; /* Hide the default checkbox */
+    position: absolute; /* Remove it from the document flow */
+}
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px; /* Space for the custom checkbox */
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #fdefdf; 
+    border: 1px solid #b4b3b3; 
+    border-radius: 0.25rem; 
+}
+
+/* Change the background color when the checkbox is checked */
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #100701; 
+    border-color: #100701; 
+}
+
+/* Add a checkmark when the checkbox is checked */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none; 
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Show the checkmark when the checkbox is checked */
+.custom-checkbox input:checked ~ .checkmark::after {
+    display: block;
+}
+
+.icon-elements{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.icon-elements span{
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #100701;
+}
+
+.below-text{
+    color: #444445;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.09rem;
+    letter-spacing:0.008rem;
+}
+
+.completed .below-text p{
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Custom Alert Styles */
+.custom-alert {
+    display:none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+}
+
+.alert-content {
+    background-color: #EDDFDE;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    text-align:left;
+    max-width: 30rem;
+}
+
+#alert-message {
+    margin-bottom: 20px;
+    font-size: 0.875rem;
+    color: #000;
+}
+
+#alert-ok-button {
+    background-color: #f8ebdc;
+    color: #000;
+    border: 1px solid #b4b3b3;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+#alert-ok-button:hover {
+    background-color: #4281a4;
+    color: white;
+    border: none;
+}

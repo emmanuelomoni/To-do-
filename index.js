@@ -1,3 +1,6 @@
+
+// I would assign variables to the ID attributes i created in my html.
+
 let btnSubmit = document.getElementById(`submit`)
 let submitForm = document.getElementById(`form`)
 let tasks = document.getElementById(`task`)
@@ -9,11 +12,14 @@ let taskNumber = document.querySelector(`.tasks-number p`)
 let progressBar = document.getElementById(`progress`)
 
 
+// I created an array variable and set it to an empty array initially.
 
 let toDotasks = []
 
+// The form is the pivotal part of this application and it's responsible for the creation of tasks. That's the reason why i added event listener the "submitForm" variable. 
 submitForm.addEventListener(`submit`, taskForm)
 
+// The function responsible for what happens to the form. Here, i created variable that holds the value of the input the user types and also the object literal that will be pushed as index we see in arrays. 
    function taskForm(event){
         event.preventDefault()
     

@@ -11,15 +11,74 @@ let alertOkMessage = document.getElementById(`alert-ok-button`)
 let taskNumber = document.querySelector(`.tasks-number p`)
 let progressBar = document.getElementById(`progress`)
 
+// VARIABLES FOR LOGIN
+let loginContainer = document.querySelector('.login-container');
+let loginForm = document.getElementById('login-form');
+let usernameInput = document.getElementById('username');
+
 
 // I created an array variable and set it to an empty array initially.
 
 let toDotasks = []
 
-// The form is the pivotal part of this application and it's responsible for the creation of tasks. That's the reason why i added event listener the "submitForm" variable. 
+// Firstly, i need to sort the login interface before i focus on the main to-do page. Here, i created a-
+// FUNCTION TO SHOW OR HIDE LOGIN PAGE
+
+function checkLogin() {
+    // Check if a username is stored
+    let storedName = localStorage.getItem('username');
+    if (storedName) {
+      // If username exists, hide login and show to-do page
+      loginContainer.style.display = 'none';
+      document.querySelector('.overall-container').style.display = 'block';
+      // Update greeting with the stored username
+      document.querySelector('.greetings h1').innerHTML = `Hi ${storedName}! <span>👋</span>`;
+    } else {
+      // If not, show login and hide to-do page
+      loginContainer.style.display = 'flex';
+      document.querySelector('.overall-container').style.display = 'none';
+    }
+  }
+  checkLogin();
+
+
+// The login form is a pivotal part of this application and it's responsible for allowing users to enter the app 
+// That's the reason why i added event listener the "loginForm" variable.
+loginForm.addEventListener('submit', loginConfirm)
+
+
+// The function responsible for what happens to the login form. Here, i created variable that holds what users enters,
+// then, i checked to see if a name is indeed entered.
+   
+    function loginConfirm(event){
+        event.preventDefault()
+
+        let userName = usernameInput.value.trim()
+
+        if (!userName){
+            showAlert(`Please, enter a name`)
+            return
+        }
+
+        localStorage.setItem(`username`, userName)
+    
+        // Hide login and show main to-do page
+        loginContainer.style.display = `none`
+        document.querySelector(`.overall-container`).style.display = `block`
+        
+        // Update greeting message
+        document.querySelector(`.greetings h1`).innerHTML = `Hi ${userName}! <span>👋</span>`
+    }
+
+
+
+
+// The form is the pivotal part of this application and it's responsible for the creation of tasks. 
+// That's the reason why i added event listener the "submitForm" variable. 
 submitForm.addEventListener(`submit`, taskForm)
 
-// The function responsible for what happens to the form. Here, i created variable that holds the value of the input the user types and also the object literal that will be pushed as index we see in arrays. 
+// The function responsible for what happens to the form. Here, i created variable that holds the 
+// value of the input the user types and also the object literal that will be pushed as index we see in arrays. 
    function taskForm(event){
         event.preventDefault()
     
